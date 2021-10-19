@@ -5,12 +5,20 @@ LIEN VERS LA SOLUTION DE LA BRANCHE 'FEATURE_CSS': https://static.oc-static.com/
 
 
     actions: 
+    - TÉLÉCHARGER UNE POLICE DE CARACTÈRE SUR INTERNET
+    ex =>  https://fonts.google.com/   ou   https://www.fontsquirrel.com/
+    ===>>> dans tous les cas il faut passer par la directive '@font-face' afin d'informer le document html de la "police non conventionnelle" que l'on souhaite ajouter
+    , mais il y a plusieurs manières de procéder,
+    1)soit en téléchargeant les fichiers de la police de caractères, et en le chargeant dans la directive en spécifiant son "chemin relatif"
+    2)soit en chargeant le lien vers une police de caractère online, via la directive @import (ex: @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');)
+    3)similaire au précédent, soit en ajoutant une balise <link/> contenant le lien vers la police online (ex: <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     - AJOUT DES RÈGLES CSS DEMANDÉES
     nextStep:
     - vérifier si le résultat correspond à celui attendu
     - puis fusionner ce feature à la branche develop
  -->
 */
+
 
 body>section:nth-of-type(1)>p{
     color:red; /*ÉTAPE 1*/
@@ -19,17 +27,35 @@ body>section:nth-of-type(1)>p{
 
 body{
     background: url("./photo.png") top right no-repeat; /*ÉTAPE 3*/
-    font-size: ; /*ÉTAPE 4*/
 }
 
+/*ÉTAPE 4*/
+/*MÉTHODE HISTORIC CI-DESSOUS*/
+@font-face 
+{
+    font-family: 'droid_sansregular';
+    src: url('./assets/DroidSans-webfont.eot');
+    src: url('./assets/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/DroidSans-webfont.woff') format('woff'),
+         url('./assets/DroidSans-webfont.ttf') format('truetype'),
+         url('./assets/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*MANIÈRE ALTERNATIVE DE PROCÉDER POUR AJOUTER UNE NOUVELLE FONT DE CARACTÈRE*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
+h1{font-family: Festive;} /*ÉTAPE 4: suite */
+h1+h2{font-family: roboto;} /*ÉTAPE 4: suite */
 h2{
+    font-family: "droid_sansregular"; /*ÉTAPE 4: suite et fin*/
+    
+    /*ÉTAPE 5*/
     border-width: 3px;
     border-style: dotted;
     border-color: brown;
     border: 3ps dotted brown;
     /*IF PROPERTY color:brown; IS SET UP, THEN*/
     border: dotted;
-    /*ÉTAPE 5*/
 }
 
 section{
