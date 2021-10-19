@@ -1,24 +1,17 @@
 /*
 <!-- 
-LIEN VERS L'EXO: https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725256-entrainez-vous-en-mettant-en-forme-votre-cv
-LIEN VERS LA SOLUTION DE LA BRANCHE 'FEATURE_CSS': https://static.oc-static.com/activities/199/evaluation_resources/mettez-en-forme-votre-cv_exemple-2019-01-03T082017.zip
+LIEN VERS L'EXO: https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv
+LIEN VERS LA SOLUTION DE LA BRANCHE 'FEATURE_CSS': https://static.oc-static.com/activities/200/evaluation_resources/organiser-son-cv_exemple-2019-01-03T082109.zip
 
 
     actions: 
-    - TÉLÉCHARGER UNE POLICE DE CARACTÈRE SUR INTERNET
-    ex =>  https://fonts.google.com/   ou   https://www.fontsquirrel.com/
-    ===>>> dans tous les cas il faut passer par la directive '@font-face' afin d'informer le document html de la "police non conventionnelle" que l'on souhaite ajouter
-    , mais il y a plusieurs manières de procéder,
-    1)soit en téléchargeant les fichiers de la police de caractères, et en le chargeant dans la directive en spécifiant son "chemin relatif"
-    2)soit en chargeant le lien vers une police de caractère online, via la directive @import (ex: @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');)
-    3)similaire au précédent, soit en ajoutant une balise <link/> contenant le lien vers la police online (ex: <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    - AJOUT DES RÈGLES CSS DEMANDÉES
+    - créer une nouvelle branch pour ce nouveau feature
+    
+    
     nextStep:
-    - vérifier si le résultat correspond à celui attendu
-    - puis fusionner ce feature à la branche develop
+    - en restylisant votre document html afin d'y intégrer une mise en page plus structurante
  -->
 */
-
 
 body>section:nth-of-type(1)>p{
     color:red; /*ÉTAPE 1*/
