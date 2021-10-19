@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3 solutions à: Comment écrire du CSS pour styliser son document HTML ? ?</title>
+
+        <!-- 1°) 
+        LE PLUS RECOMMANDÉ:
+        PERMET UNE MEILLEURE MODULARITÉE ET COHÉRENCE DU CODE 
+        En écrivant son code dans un fichier séparé, et en l'intégrant dans son document HTML via une balise <link/>
+        (petit conseil, UTILISER LE PLUGIN "EMMET" pour générer cette balise là comme toutes les autres):
+        
+        CRÉER UN FICHIER style.css au mmême endroit que votre document index.html, 
+        PUIS CRÉER la balise ci-dessous -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <!-- 2°)
+    SOLUTION TEMPORAIRE:
+    SOLUTION POUR RÉALISER UN PREMIER JET
+    Soit pour partager le document HTML à un internaute ou quelqu'un sans nécessiter d'autres fichiers pour le style
+    Soit pour intégrer le style d'autres projet de manière rapide et temporaire
+    Soit pour qu'il soit intégré par d'autres projets - MANIÈRE PERMANENT D'UTILISER UNE BALISE <style/> MAIS SEULEMENT DANS UN FICHIER HTML QUI N'EST PAS UN DOCUMENT HTML (sans doctype)
+
+    LA BALISE <style/> PEUT ÊTRE CRÉÉ N'IMPORTE OÙ DANS LE DOCUMENT, SANS RÉPERCUSSION AUCUNE SUR LE RÉSULTAT
+    NORMALEMENT ELLE SE MET DANS LA BALISE <head/>, MAIS LÀ JE L'AI MIS ENTRE LA BALISE <head/> ET LA BALISE <body/>
+    -->
+    <style>
+
+        /*
+            UNE RÈGLE CSS C'EST:        [CIBLER] - [STYLISER]
+            cible{
+                propriété_de_style_NORMAL: un_mot
+                propriété_de_style_NUMÉRIQUE: 324
+                propriété_de_style_NUMÉRIQUE_MESURE: 324_mesure
+                propriété_de_style_COULEUR: #HEXA01
+                propriété_de_style_MULTI: 1ère_valeur   2d_valeur    3ième_valeur   ...
+                propriété_de_style_AVEC_ESPACE: "valeur de la propriété SOUS FORME DE GROUPE DE MOTS AVEC DES ESPACE ET ENTRE GUILLEMETS"
+            }
+        */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+        /* 
+        A°)                             [ CIBLER ] 
+                                        UNE ZONE DU DOCUMENT HTML À L'AIDE SES BALISES  
+        */
+
+        p,h1,       /* ENSEMBLE DE BALISES_CIBLES SÉPARÉS PAR UNE "," :virgule */
+        p span,     /* BALISES_CIBLES span ENFANT DE p */           /* certaines balises (comme p) n'acceptent que des balises de type inline(ou inline-block) en leur sein , et refusent celles de type block (en les éjectant de leur intérieur à l'affichage de la page*/
+        p+h2,       /* BALISES_CIBLES h1 FRÈRE DIRECTE DE p */
+        p~h2,       /* BALISES_CIBLES h1 GRAND-FRÈRE DE p */
+        div#mon_id,    /* BALISES_CIBLES p AYANT L'ATTRIBUT HTML "id"  */
+        div.ma_class,  /* BALISES_CIBLES p AYANT L'ATTRIBUT HTML "class" */
+
+        /* CI-DESSOUS
+        LES BALISES_CIBLES dont un attribut correspond à un fait (existe, commence par, ...) */
+        p[siAttributExiste],        
+        p[siAttributExiste = "et est égale à un valeur précise ?"],
+        p[siAttributExiste *= "('contient') et correspond à une expression régulière ?"],
+        p[siAttributExiste ^= "('commence par') et correspond à une expression régulière ?"],
+        p[siAttributExiste $= "('fini par') et correspond à une expression régulière ?"]
+        {   
+            property: value;
+            border:solid;
+        }
+        #mon_id{border-left: 10px solid pink;}
+        #ma_class{text-decoration:underline;font-weight:bolder;}
+        #mon_id>#___mon_id.ma_class{background: brown;color:green;}
+        p[data-qlqchose]{background: green;}
+        p[data-qlqchose = "oui__||__non"]{border-top:1em solid gold}
+        p[data-qlqchose *= "||"]{border-right:1em solid purple}
+        p[data-qlqchose ^= "oui"]{border-bottom:1em solid gray}
+        p[data-qlqchose $= "non"]{border-left:1em solid black}
+        /* 
+        LIEN VERS L'ENSEMBLE DES "SELECTEURS CSS" 
+        https://www.w3.org/Style/css3-selectors-updates/WD-css3-selectors-20010126.fr.html#selectors
+        */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+        /* 
+        B°)                             [ STYLISER ] 
+                                        À L'AIDE DES PROPRIÉTÉ   
+        */
+        p{
+            background: red;
+            z-index:100;
+            border-width:100px;
+            color: #ff324e; color: #f4e; 
+            border: 1px solid red; box-shadow: 0 0 10px 1px black inset;
+            font-family: "Arial qlqchose"
+        }
+        /*
+        LIEN VERS L'ENSEMBLE DES PROPIÉTÉS CSS 
+        https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608902-memento-des-proprietes-css
+        */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+</style>
+
+    <body>
+        <div id="#mon_id">
+            Je suis une balise universelle, <span class="ma_class">ET MOI AUSSI</span> !!!   <br>
+            <div id="___mon_id" class="maclass">
+                JE N'AI PAS DROIT D'UTILISER PLUSIEURS FOIS LE MÊME NOM D'ID DANS UN MÊME DOCUMENT <br>
+                MAIS POUR LES NOMS DE CLASS PAS DE SOUCIS !!!
+            </div>
+            <p data-qlqchose="oui__||__non"><b><u>PS:</u></b>
+                <u>AVERTISSEMENT</u> 
+                Certaines balises (comme p) n'acceptent que des balises de type inline(ou inline-block) en leur sein , et refusent celles de type block (en les éjectant de leur intérieur à l'affichage de la page.
+                <u>PETIT CONSEIL:</u> 
+                <ul>
+                    <li>Utiliser la console du navigateur pour observer le code HTML, ainsi que le comportement du code CSS sur le HTML</li>
+                    <li>Et le utiliser VSCode pour observer le document HTML, et en avoir une meilleur compréhension</li> 
+                </ul>
+            </p>
+            <p data-qlqchose="ui__|__no"><b><u>PS:</u></b>
+                À PART LE BACKGROUND VERT, <br>
+                MOI JE N'AURAIS AUCUN STYLES<br/>
+                CAR MON ATTRIBUT "data-qlqchose" NE CORRESPOND JAMAIS AUX RÈGLES CSS DÉFINIT
+            </p>
+        </div>
+        <hr>
+
+
+
+        <!-- 3°) 
+        SOLUTION TRÈS COURT TERME:
+        Soit pour tester une idée de manière intéractive via la console du navigateur, ou de manière brute dans son code html
+        Soit pour rendre la style à appliquer prioritaire
+        
+
+        DANS LA BALISE OUVRANTE D'UNE BALISE HTML, ÉCRIRE L'ATTRIBUT "style=''" ET Y ÉCRIRE LES PROPRIÉTÉS DE STYLE DÉSIRÉS
+        -->
+        <h1 style=" je_suis_une_propriété_css: 'et je suis sa valeur'; background:purple; color: white;font-weight: bolder;">2 TYPES DE CATÉGORIES DE BALISE HTML5 PRÉVALENT</h1>
+        <p id="#mon_id" class="ma_class">
+            LES BALISE DE TYPES:
+            <ol>
+                <li>INLINE</li>
+                <li>BLOCK</li>
+            </ol>
+            
+        </p>
+        
+
+
+
+
+
+        <h2>8 CATÉGORIE DE BALISES EXISTENT</h2>
+        <p>
+            DANS L'ORDRE, LES BALISES DE: 
+            <ol>
+                <li>premier niveau (html, head, body)</li>
+                <li>méta-données (meta, link, script, style, title)</li>
+                <li>baseline (h#, p)</li>
+                <li>mise en page inline (em/strong, u, b, i, ....</li>
+                <li>mise en page block (dl, ul, ol table, form, details, et leurs sous-éléments)</li>
+                <li>structurantes (header, nav, main, section, article, aside, footer</li>
+                <li>multimédia (iframe, a, img, figure, audio, video, object</li>
+                <li>universelles (span, div)</li>
+            </ol>
+        </p>
+    </body>
+</html>
+
