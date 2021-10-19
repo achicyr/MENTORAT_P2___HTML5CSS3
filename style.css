@@ -1,1 +1,46 @@
-body{background:red;}
+/*
+<!-- 
+LIEN VERS L'EXO: https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725256-entrainez-vous-en-mettant-en-forme-votre-cv
+LIEN VERS LA SOLUTION DE LA BRANCHE 'FEATURE_CSS': https://static.oc-static.com/activities/199/evaluation_resources/mettez-en-forme-votre-cv_exemple-2019-01-03T082017.zip
+
+
+    actions: 
+    - AJOUT DES RÈGLES CSS DEMANDÉES
+    nextStep:
+    - vérifier si le résultat correspond à celui attendu
+    - puis fusionner ce feature à la branche develop
+ -->
+*/
+
+body>section:nth-of-type(1)>p{
+    color:red; /*ÉTAPE 1*/
+    text-align: right; /*ÉTAPE 2*/
+}
+
+body{
+    background: url("./photo.png") top right no-repeat; /*ÉTAPE 3*/
+    font-size: ; /*ÉTAPE 4*/
+}
+
+h2{
+    border-width: 3px;
+    border-style: dotted;
+    border-color: brown;
+    border: 3ps dotted brown;
+    /*IF PROPERTY color:brown; IS SET UP, THEN*/
+    border: dotted;
+    /*ÉTAPE 5*/
+}
+
+section{
+    box-shadow: 0 0 3rem .1em ; /*ÉTAPE 6 -- LAST STEP*/
+}
+
+
+
+
+/*!!EXTRA!!*/
+section>p:nth-child(2){
+    text-shadow: 0 0 3px;
+    color:blue;
+}
