@@ -1,29 +1,39 @@
 /*
 <!-- 
 LIEN VERS L'EXO: https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv
-LIEN VERS LA SOLUTION DE LA BRANCHE 'FEATURE_CSS': https://static.oc-static.com/activities/200/evaluation_resources/organiser-son-cv_exemple-2019-01-03T082109.zip
 
-
-    actions: 
-    - créer une nouvelle branch pour ce nouveau feature
-    
-    
-    nextStep:
-    - en restylisant votre document html afin d'y intégrer une mise en page plus structurante
  -->
 */
 
 body>section:nth-of-type(1)>p{
-    color:red; /*ÉTAPE 1*/
-    text-align: right; /*ÉTAPE 2*/
+    color:red; 
+    text-align: right; 
 }
 
 body{
-    background: url("./photo.png") top right no-repeat; /*ÉTAPE 3*/
+    background: url("./photo.png"); 
+    margin:0;
+}
+body>*{width:calc(90% - 50px);display: inline-block;float:left;margin:1em 0 1em;background:whitesmoke;
+padding:1em;box-sizing: border-box;
+}
+body>.liseret{
+    width:10%;
+    height: 1000px;
+    background:darkred;
+    border-radius:0 5px 5px 0;
+}
+body>.liseret~*{
+    margin:1em 25px;
+}
+body>header{text-align:center;}
+body>main>section{
+    width:28%;
+    float:left;
+    margin-right: 5%;
 }
 
-/*ÉTAPE 4*/
-/*MÉTHODE HISTORIC CI-DESSOUS*/
+/*MÉTHODE HISTORIC CI-DESSOUS POUR IMPORTER UNE NOUVELLE FONT*/
 @font-face 
 {
     font-family: 'droid_sansregular';
@@ -37,28 +47,24 @@ body{
 }
 /*MANIÈRE ALTERNATIVE DE PROCÉDER POUR AJOUTER UNE NOUVELLE FONT DE CARACTÈRE*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
-h1{font-family: Festive;} /*ÉTAPE 4: suite */
-h1+h2{font-family: roboto;} /*ÉTAPE 4: suite */
+h1{font-family: Festive;} 
+h1+h2{font-family: roboto;} 
 h2{
-    font-family: "droid_sansregular"; /*ÉTAPE 4: suite et fin*/
+    font-family: "droid_sansregular"; 
     
-    /*ÉTAPE 5*/
-    border-width: 3px;
-    border-style: dotted;
-    border-color: brown;
-    border: 3ps dotted brown;
-    /*IF PROPERTY color:brown; IS SET UP, THEN*/
-    border: dotted;
+    
+}
+img{
+    box-shadow: 0 0 3rem .1em ; 
+    border: 3px solid brown;
 }
 
 section{
-    box-shadow: 0 0 3rem .1em ; /*ÉTAPE 6 -- LAST STEP*/
 }
 
 
 
 
-/*!!EXTRA!!*/
 section>p:nth-child(2){
     text-shadow: 0 0 3px;
     color:blue;
