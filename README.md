@@ -1,10 +1,11 @@
-# Ceci est la branche "master"
+# Je suis un petit test de titre markdown
 
-Le fichier index.html est un exercice de base pour apprendre et comprendre HTML 
-Il consiste en à appliquer du style ) un document HTML tout en découvrant le ce qu'est:
-- un document HTML, 
-- le langage HTML,
-- une balise, et ses attributs
-
-Le tout est de vous rendre possible et facile la création d'une page web basique.
+# 1)  action:
+"!" => emmet
+ajout d'une balise meta <title/>
+## next step ?
+ajouter le fichier de stylisation du document html 
+=> créer le fichier 'style.css'
+=> ajouter le à l'aide de la balise meta <link/>
+=> dans style.css, essayer d'ajouter une règle css "background:red" à une balise qlconque , puis ouvrir index.html pour vérifier que la règle css s'applique bien
 
