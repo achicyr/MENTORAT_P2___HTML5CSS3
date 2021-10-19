@@ -7,52 +7,57 @@
     <title>Curriculum vitae & Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- h1{Mr Cyrille}+h2{ACHI}+figure>img[src="./photo.png"]+figcaption{comentaire de photo} -->
-    <h1>Mr Cyrille</h1>
-    <h2>ACHI</h2>
-    <figure>
-        <img src="./photo.png" alt="">
-        <figcaption>comentaire de photo</figcaption>
-    </figure>
+    <div class="liseret"></div>
+    <!-- header>h1{Mr Cyrille}+h2{ACHI}+figure>img[src="./photo.png"]+figcaption{comentaire de photo} -->
+    <header>
+        <h1>Mr Cyrille</h1>
+        <h2>ACHI</h2>
+        <figure>
+            <img src="./photo.png" alt="">
+            <figcaption>comentaire de photo</figcaption>
+        </figure>
+    </header>
     <!-- (section>h2{mon expérience}+p{la description de mon expérience}+ul>(li{liste à puce pour décrire mon expérience})*3)*3 -->
-    <section>
-        <h2>mon expérience</h2>
-        <p>la description de mon expérience</p>
-        <ul>
-            <li>liste à puce pour décrire mon expérience</li>
-            <li>liste à puce pour décrire mon expérience</li>
-            <li>liste à puce pour décrire mon expérience</li>
-        </ul>
-    </section>
-    <section>
-        <h2>mes compétences</h2>
-        <p>la description de mon expérience</p>
-        <ul>
-            <li>liste à puce pour décrire mes compétences</li>
-            <li>liste à puce pour décrire mes compétences</li>
-            <li>liste à puce pour décrire mes compétences</li>
-        </ul>
-    </section>
-    <section>
-        <h2>ma formation</h2>
-        <p>la description de ma formation</p>
-        <ul>
-            <li>liste à puce pour décrire ma formation</li>
-            <li>liste à puce pour décrire ma formation</li>
-            <li>liste à puce pour décrire ma formation</li>
-        </ul>
-    </section>
-    
+    <main>
+        <section>
+            <h2>mon expérience</h2>
+            <p>la description de mon expérience</p>
+            <ul>
+                <li>liste à puce pour décrire mon expérience</li>
+                <li>liste à puce pour décrire mon expérience</li>
+                <li>liste à puce pour décrire mon expérience</li>
+            </ul>
+        </section>
+        <section>
+            <h2>mes compétences</h2>
+            <p>la description de mon expérience</p>
+            <ul>
+                <li>liste à puce pour décrire mes compétences</li>
+                <li>liste à puce pour décrire mes compétences</li>
+                <li>liste à puce pour décrire mes compétences</li>
+            </ul>
+        </section>
+        <section>
+            <h2>ma formation</h2>
+            <p>la description de ma formation</p>
+            <ul>
+                <li>liste à puce pour décrire ma formation</li>
+                <li>liste à puce pour décrire ma formation</li>
+                <li>liste à puce pour décrire ma formation</li>
+            </ul>
+        </section>
+    </main>
 
 
-    <div class="instructions">
+    <div id="instructions">
         <style>
-            .instructions{transition:height .4s, width .4s;position:fixed;top:0;right:0;width:50px;height:0;overflow:hidden;padding:3em .5em .5em;border-top:solid;background-color: silver;}
-            .instructions:active{background-color: red;height:100%;overflow:scroll;width:50%}
+            #instructions{margin:0 !important;transition:height .4s, width .4s;position:fixed;top:0;right:0;width:50px;height:0;overflow:hidden;padding:3em .5em .5em;border-top:solid;background-color: silver;}
+            #instructions:active{background-color: brown;height:100%;overflow:scroll;width:50%}
+            #instructions_content{background: whitesmoke;padding:1em;}
         </style>
         <a href="./solutions/activite_partie3/mathieu_nebra.html">lien vers la solution de: activité 3</a>
         
@@ -61,19 +66,45 @@
 
 
 
-        <div class="content">
-            <h2>1)  actions:</h2>
+        <div id="instructions_content">
+            <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv">https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv</a>
+            <h2>1)  consignes:</h2>
             <ul>
-                <li>créer une nouvelle branch pour ce nouveau feature (ex: "feature_finallayout")</li>
+                <li>créer un liseret à gauche</li>
+                <li>aligner les section à l'horizontal</li>
+                <li>utiliser des valeurs relatives (pourcentage), sauf le liseret (en valeur absolute, en px par exemple)
+                    <br>l'aspect de la page ne doit pas changer quelqu'en soit la taille de l'écran
+                </li>
+                <li>utiliser des balises sémantiques</li>
             </ul>
-
-            <h2>## nextStep:</h2>
-                <ul>
-                    <li>en restylisant votre document html afin d'y intégrer une mise en page plus structurante</li>
-                </ul>
-
+            <h2>2)  actions:</h2>
+            <ol>
+                <li>créer une balise de class liseret, juste après l'ouverture de la balise body</li>
+                <li>si vous avez pas stylisé aléatoire des balises, et entré aléatoirement des valeurs pour les styliser <br>
+                    veillez à faire en sorte que le tout ai un sens cohérent (par exemple que le text en gras soit sur les titres et pas sur les liste, ou encore, que l'ombre soit sur une image et pas sur du texte, ou encore, mettre une image de fond pour le body qui soit un motif qui se répete partout, et pas une image figé quelque part, ..) <br>
+                    => Rectifier le style afin de rendre votre document jolie ou agréable à voir 
+                </li>
+                <li>si ce n'est pas déjà, rendre votre document plus SEO freindly,<br>
+                    c'est à dire de faire en sorte que les balises enfants de body soient quasi toujours les memes (header, main, footer, ...aside)
+                </li>
+                <li>appliquer des dimensions absolues pour la hauteur du liseret, et disons 10% de largeur (width:10%;), <br>
+                    donner lui un background pour qu'on puisse le voir
+                </li>
+                <li>pour que tous les élements s'enchaines les un après les autres, il faut soit:
+                    <ul>
+                        <li>définir tous les enfants de body en display:inline-block;<br>
+                            et faire en sorte que body n'ai que deux enfants, un le liseret, et l'autre le reste <br>
+                            ainsi les deux blocks flotteraient l'un à côté de l'autre
+                            ne pas oublier de spécifier les tailles de ces deux block (width:???%)
+                        </li>
+                        <li></li>
+                    </ul>   
+                </li>
+                <li>pour aligner les section, il faut utiliser les propriété float:left; <br>
+                    ainsi qu'une taille width:33% puisqu'ils doivent se partager toute la taille de leur balise parente et qu'il y en a trois => 100%/3=33%
+                </li>
+            </ol>
                 
-                <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv">https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/6725301-entrainez-vous-en-organisant-votre-cv</a>
         </div>
     </div>
 </body>
