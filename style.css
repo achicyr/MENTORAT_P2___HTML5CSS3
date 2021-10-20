@@ -96,6 +96,18 @@ body>nav>button{}
 
 /*-- --fin branche---------------------------------------- --*/
 /*-- ---------------------------------------------------- --*/
+
+
+
+
+
+/*-- ---------------------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
+/* BRANCHE code_main
+CODER LE CORPS DU DOCUMENT */
+
+
+
 body>main{}
 body>main>article{}
 body>main>article>h2{}
@@ -109,6 +121,20 @@ body>main>section>p{}
 body>main>section>.sns{}
 body>main>section>.sns>button{}
 body>main>section>.sns>button>i{}
+
+
+
+/*-- --fin branche---------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
+
+
+
+
+
+/*-- ---------------------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
+/* BRANCHE code_footer
+CODER LE FOOTER */
 body>footer{}
 body>footer>.arrowup{}
 body>footer>section{}
@@ -119,3 +145,8 @@ body>footer>section>ul>li{}
 body>footer>section>ul>li>img{}
 body>footer>section:last-of-type>ul{}
 body>footer>section:last-of-type>ul>li{}
+
+
+
+/*-- --fin branche---------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
