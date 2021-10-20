@@ -12,6 +12,60 @@
 
 
         <link rel="stylesheet" href="style.css">
+        <style>
+            /* Définition des polices personnalisées */
+            @font-face
+            {
+                font-family: 'BallparkWeiner';
+                src: url('polices/ballpark.eot');
+                src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+                    url('polices/ballpark.woff') format('woff'),
+                    url('polices/ballpark.ttf') format('truetype'),
+                    url('polices/ballpark.svg#BallparkWeiner') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face
+            {
+                font-family: 'Dayrom';
+                src: url('polices/dayrom.eot');
+                src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+                    url('polices/dayrom.woff') format('woff'),
+                    url('polices/dayrom.ttf') format('truetype'),
+                    url('polices/dayrom.svg#Dayrom') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            header h1{font-family: BallparkWeiner;}
+            header h2, header>menu a, main h2, main h3, footer h5{font-family: Dayrom;}
+
+
+
+            /* Définition des couleurs et fond*/
+            :root{
+                --fontactive: brown;
+                --button: brown;
+                --fontnormal: black;
+                --fontlight: whitesmoke;
+            }
+            body{background: url("assets/images/fond_jaune.png")}
+            header>menu>li.active>a{color: var(--fontactive); text-decoration:underline;}
+            body>nav{color: var(--fontlight)}
+            body>nav>button{background:var(--button);}
+            .sns>button{border:none;background:none;}
+            .sns>button>i{width: 42px;height: 42px;display:inline-block;}
+            .fb{background:url('assets/images/fb.png') no-repeat;}
+            .tw{background:url('assets/images/tw.png') no-repeat;}
+            .vim{background:url('assets/images/vim.png') no-repeat;}
+            .fli{background:url('assets/images/fli.png') no-repeat;}
+            .rss{background:url('assets/images/rss.png') no-repeat;}
+
+            /* Définition des images */
+            body>footer>section:last-of-type>ul>li{
+                list-style-image: url("assets/images/ico_liensexterne.png");
+            }
+        </style>
 
 
     <!-- FIN----------- tpFeature_stylisation_du_doc -->
@@ -30,10 +84,10 @@
                 <h2>Carnets de voyage</h2>
             </figure>
             <menu>
-                <li><a href="">ACCUEIL</a></li>
-                <li><a href="">BLOG</a></li>
-                <li><a href="">CV</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li class="active"><a href="#">ACCUEIL</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">CONTACT</a></li>
             </menu>
         </header>
         <!-- nav.banner>p+button -->
