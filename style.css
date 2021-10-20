@@ -1,15 +1,86 @@
-body{background: wheat;}
 
-body{}
-body>header{}
+/* Définition des polices personnalisées */
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('assets/polices/ballpark.eot');
+    src: url('assets/polices/ballpark.eot?#iefix') format('embedded-opentype'),
+        url('assets/polices/ballpark.woff') format('woff'),
+        url('assets/polices/ballpark.ttf') format('truetype'),
+        url('assets/polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('assets/polices/dayrom.eot');
+    src: url('assets/polices/dayrom.eot?#iefix') format('embedded-opentype'),
+        url('assets/polices/dayrom.woff') format('woff'),
+        url('assets/polices/dayrom.ttf') format('truetype'),
+        url('assets/polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+header h1{font-family: BallparkWeiner;}
+header h2, header>menu a, main h2, main h3, footer h5{font-family: Dayrom;}
+
+
+
+/* Définition des couleurs et fond*/
+:root{
+    --fontactive: brown;
+    --button: brown;
+    --fontnormal: black;
+    --fontlight: whitesmoke;
+}
+body{background: url("assets/images/fond_jaune.png")}
+header>menu>li.active>a{color: var(--fontactive); text-decoration:underline;}
+body>nav{color: var(--fontlight)}
+body>nav>button{background:var(--button);}
+.sns>button{border:none;background:none;}
+.sns>button>i{width: 42px;height: 42px;display:inline-block;}
+.fb{background:url('assets/images/fb.png') no-repeat;}
+.tw{background:url('assets/images/tw.png') no-repeat;}
+.vim{background:url('assets/images/vim.png') no-repeat;}
+.fli{background:url('assets/images/fli.png') no-repeat;}
+.rss{background:url('assets/images/rss.png') no-repeat;}
+
+/* Définition des images */
+body>footer>section:last-of-type>ul>li{
+    list-style-image: url("assets/images/ico_liensexterne.png");
+}
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+            
+            
+body{margin:0;}
+body>header{padding:.5em;}
+body>*:not(header){padding:0 3em;}
+body>header{
+    display:flex;
+    justify-content: space-between;
+    border-image: url(assets/images/separateur.png) 30;
+    border-bottom: solid;
+}
 body>header>figure{}
-body>header>figure>h1{}
+body>header>figure>h1, body>header>figure>h2{margin:0;}
+body>header>figure>h1{    font-size: 1.5em;font-weight: normal;}
 body>header>figure>h1>img{}
 body>header>figure>h1>span{}
-body>header>figure>h2{}
-body>header>menu{}
+body>header>figure>h2{font-weight:lighter;}
+body>header>menu{display:flex;justify-content:space-around;align-items: end; list-style:none;width:350px;}
 body>header>menu>li{}
-body>header>menu>li>a{}
+body>header>menu>li>a{text-decoration:none;font-size:1.2em;color:var(--fontnormal);}
 body>nav{}
 body>nav>p{}
 body>nav>button{}
