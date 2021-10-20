@@ -81,9 +81,21 @@ body>header>figure>h2{font-weight:lighter;}
 body>header>menu{display:flex;justify-content:space-around;align-items: end; list-style:none;width:350px;}
 body>header>menu>li{}
 body>header>menu>li>a{text-decoration:none;font-size:1.2em;color:var(--fontnormal);}
+/*-- ---------------------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
+/* BRANCHE code_banner
+CODER LA BANNNIÈRE */
+
+
+
 body>nav{}
 body>nav>p{}
 body>nav>button{}
+
+
+
+/*-- --fin branche---------------------------------------- --*/
+/*-- ---------------------------------------------------- --*/
 body>main{}
 body>main>article{}
 body>main>article>h2{}
