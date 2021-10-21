@@ -81,13 +81,6 @@ body>header>figure>h2{font-weight:lighter;}
 body>header>menu{display:flex;justify-content:space-around;align-items: end; list-style:none;width:350px;}
 body>header>menu>li{}
 body>header>menu>li>a{text-decoration:none;font-size:1.2em;color:var(--fontnormal);}
-/*-- ---------------------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
-/* BRANCHE code_banner
-CODER LA BANNNIÈRE */
-
-
-
 body>nav{
     margin-top:1em;
     height: 200px;
@@ -121,47 +114,45 @@ body>nav>button{
 
 
 
-/*-- --fin branche---------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
-
-
-
-
-
-/*-- ---------------------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
-/* BRANCHE code_main
-CODER LE CORPS DU DOCUMENT */
-
-
-
-body>main{}
-body>main>article{}
-body>main>article>h2{}
+body>main{display: flex;text-align: justify;justify-content: space-between;margin-top: 3em;}
+body>main>article{width: 65%;}
+body>main>article>h2{font-weight: lighter;}
+body>main>article>h2>img{
+    position: relative;
+    top: .5em;
+    margin-right: .5em;
+}
 body>main>article>h2>img{}
-body>main>article>h2>img{}
-body>main>section{}
-body>main>section>.arrow-left{}
-body>main>section>h3{}
-body>main>section>img{}
+body>main>section{
+    width:30%;
+    background: gray;
+    padding: 1em;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 3px 1px black;
+}
+body>main>section>.arrow-left{
+    position: absolute;
+    left: -9%;
+    top: 30%;
+    width: 2em;
+    height: 2em;
+    background: url(assets/images/bulle.png) no-repeat;
+    background-size: contain;
+}
+body>main>section>h3{margin-top: 0;text-align: left;}
+body>main>section>img{margin: 0 auto;width: 100px;}
 body>main>section>p{}
-body>main>section>.sns{}
-body>main>section>.sns>button{}
+body>main>section>.sns{display: flex;justify-content: space-between;}
+body>main>section>.sns>button{padding:0;}
 body>main>section>.sns>button>i{}
 
 
 
 /*-- --fin branche---------------------------------------- --*/
 /*-- ---------------------------------------------------- --*/
-
-
-
-
-
-/*-- ---------------------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
-/* BRANCHE code_footer
-CODER LE FOOTER */
 body>footer{}
 body>footer>.arrowup{}
 body>footer>section{}
@@ -172,8 +163,3 @@ body>footer>section>ul>li{}
 body>footer>section>ul>li>img{}
 body>footer>section:last-of-type>ul{}
 body>footer>section:last-of-type>ul>li{}
-
-
-
-/*-- --fin branche---------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
