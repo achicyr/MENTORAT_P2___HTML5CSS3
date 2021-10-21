@@ -65,7 +65,7 @@ body>footer>section:last-of-type>ul>li{
             
 body{margin:0;}
 body>header{padding:.5em;}
-body>*:not(header){padding:0 3em;}
+body>*:not(header){margin:0 3em;}
 body>header{
     display:flex;
     justify-content: space-between;
@@ -88,9 +88,36 @@ CODER LA BANNNIÈRE */
 
 
 
-body>nav{}
-body>nav>p{}
-body>nav>button{}
+body>nav{
+    margin-top:1em;
+    height: 200px;
+    padding: .5em;
+    border-radius: 5px;
+    background: url(assets/images/sanfrancisco.jpg) center center;
+    position: relative;
+    color: var(--fontlight);
+}
+body>nav>p{
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(11,11,11,.5);
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 5px 5px;
+}
+body>nav>button{
+    background:var(--button);
+    color:inherit;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    padding: .5em;
+    border-radius: 5px;
+}
 
 
 
