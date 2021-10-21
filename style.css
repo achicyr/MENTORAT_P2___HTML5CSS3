@@ -25,6 +25,7 @@
 }
 header h1{font-family: BallparkWeiner;}
 header h2, header>menu a, main h2, main h3, footer h5{font-family: Dayrom;}
+.fontactive{color:var(--fontactive);}
 
 
 
@@ -75,7 +76,7 @@ body>header{
 }
 body>header>figure{margin: 0;}
 body>header>figure>h1, body>header>figure>h2{margin:0;}
-body>header>figure>h1{    font-size: 1.5em;font-weight: normal;}
+body>header>figure>h1{    font-size: 2.5em;font-weight: normal;}
 body>header>figure>h1>img{}
 body>header>figure>h1>span{}
 body>header>figure>h2{font-weight:lighter;}
@@ -116,7 +117,10 @@ body>nav>button{
 
 
 
-body>main{display: flex;text-align: justify;justify-content: space-between;margin-top: 3em;}
+body>main{
+    display: flex;text-align: justify;justify-content: space-between;margin-top: 3em;
+    padding-bottom:2em;
+}
 body>main>article{width: 65%;}
 body>main>article>h2{font-weight: lighter;}
 body>main>article>h2>img{
@@ -144,8 +148,8 @@ body>main>section>.arrow-left{
     background: url(assets/images/bulle.png) no-repeat;
     background-size: contain;
 }
-body>main>section>h3{margin-top: 0;text-align: left;}
-body>main>section>img{margin: 0 auto;width: 100px;}
+body>main>section>h3{margin-top: 0;text-align: left;font-weight:100;}
+body>main>section>img{margin: 0 auto;width: 100px;display:block;}
 body>main>section>p{}
 body>main>section>.sns{display: flex;justify-content: space-between;}
 body>main>section>.sns>button{padding:0;}
