@@ -64,15 +64,15 @@ body>footer>section:last-of-type>ul>li{
             
             
 body{margin:0;}
-body>header{padding:.5em;}
-body>*:not(header){margin:0 3em;}
+body>header, body>footer{    padding: 1em 3em;}
+body>nav,body>main{margin:0 3em;}
 body>header{
     display:flex;
     justify-content: space-between;
     border-image: url(assets/images/separateur.png) 30;
     border-bottom: solid;
 }
-body>header>figure{}
+body>header>figure{margin: 0;}
 body>header>figure>h1, body>header>figure>h2{margin:0;}
 body>header>figure>h1{    font-size: 1.5em;font-weight: normal;}
 body>header>figure>h1>img{}
@@ -87,6 +87,7 @@ body>nav{
     padding: .5em;
     border-radius: 5px;
     background: url(assets/images/sanfrancisco.jpg) center center;
+    background-size: cover;
     position: relative;
     color: var(--fontlight);
 }
