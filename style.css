@@ -50,6 +50,7 @@ body>nav>button{background:var(--button);}
 /* Définition des images */
 body>footer>section:last-of-type>ul>li{
     list-style-image: url("assets/images/ico_liensexterne.png");
+    color: var(--fontactive);
 }
 
 
@@ -152,15 +153,29 @@ body>main>section>.sns>button>i{}
 
 
 
-/*-- --fin branche---------------------------------------- --*/
-/*-- ---------------------------------------------------- --*/
-body>footer{}
-body>footer>.arrowup{}
-body>footer>section{}
-body>footer>section>h5{}
+body>footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-image: url(assets/images/separateur.png) 30;
+    border-top: 3px solid;
+    background: url(assets/images/ombre.png) top left repeat-x;
+}
+body>footer>.arrowup{
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    background: url(assets/images/ico_top.png) no-repeat;
+    width: 55px;
+    height: 55px;
+}
+body>footer>section{width: 33%;}
+body>footer>section>h5{font-weight:100;font-size:1em;}
 body>footer>section>p{}
-body>footer>section>ul{}
+body>footer>section>ul{list-style: none;padding: 0;
+}
+body>footer>section:not(:last-of-type)>ul{display: flex;justify-content: space-around;}
 body>footer>section>ul>li{}
 body>footer>section>ul>li>img{}
 body>footer>section:last-of-type>ul{}
-body>footer>section:last-of-type>ul>li{}
+body>footer>section:last-of-type>ul>li:nth-of-type(2n+1){float:right;}
