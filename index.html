@@ -4,96 +4,171 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TP: son premier site web</title>
+        <title>3 solutions à: Comment écrire du CSS pour styliser son document HTML ? ?</title>
+
+        <!-- 1°) 
+        LE PLUS RECOMMANDÉ:
+        PERMET UNE MEILLEURE MODULARITÉE ET COHÉRENCE DU CODE 
+        En écrivant son code dans un fichier séparé, et en l'intégrant dans son document HTML via une balise <link/>
+        (petit conseil, UTILISER LE PLUGIN "EMMET" pour générer cette balise là comme toutes les autres):
+        
+        CRÉER UN FICHIER style.css au mmême endroit que votre document index.html, 
+        PUIS CRÉER la balise ci-dessous -->
         <link rel="stylesheet" href="style.css">
     </head>
+
+    <!-- 2°)
+    SOLUTION TEMPORAIRE:
+    SOLUTION POUR RÉALISER UN PREMIER JET
+    Soit pour partager le document HTML à un internaute ou quelqu'un sans nécessiter d'autres fichiers pour le style
+    Soit pour intégrer le style d'autres projet de manière rapide et temporaire
+    Soit pour qu'il soit intégré par d'autres projets - MANIÈRE PERMANENT D'UTILISER UNE BALISE <style/> MAIS SEULEMENT DANS UN FICHIER HTML QUI N'EST PAS UN DOCUMENT HTML (sans doctype)
+
+    LA BALISE <style/> PEUT ÊTRE CRÉÉ N'IMPORTE OÙ DANS LE DOCUMENT, SANS RÉPERCUSSION AUCUNE SUR LE RÉSULTAT
+    NORMALEMENT ELLE SE MET DANS LA BALISE <head/>, MAIS LÀ JE L'AI MIS ENTRE LA BALISE <head/> ET LA BALISE <body/>
+    -->
+    <style>
+
+        /*
+            UNE RÈGLE CSS C'EST:        [CIBLER] - [STYLISER]
+            cible{
+                propriété_de_style_NORMAL: un_mot
+                propriété_de_style_NUMÉRIQUE: 324
+                propriété_de_style_NUMÉRIQUE_MESURE: 324_mesure
+                propriété_de_style_COULEUR: #HEXA01
+                propriété_de_style_MULTI: 1ère_valeur   2d_valeur    3ième_valeur   ...
+                propriété_de_style_AVEC_ESPACE: "valeur de la propriété SOUS FORME DE GROUPE DE MOTS AVEC DES ESPACE ET ENTRE GUILLEMETS"
+            }
+        */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+        /* 
+        A°)                             [ CIBLER ] 
+                                        UNE ZONE DU DOCUMENT HTML À L'AIDE SES BALISES  
+        */
+
+        p,h1,       /* ENSEMBLE DE BALISES_CIBLES SÉPARÉS PAR UNE "," :virgule */
+        p span,     /* BALISES_CIBLES span ENFANT DE p */           /* certaines balises (comme p) n'acceptent que des balises de type inline(ou inline-block) en leur sein , et refusent celles de type block (en les éjectant de leur intérieur à l'affichage de la page*/
+        p+h2,       /* BALISES_CIBLES h1 FRÈRE DIRECTE DE p */
+        p~h2,       /* BALISES_CIBLES h1 GRAND-FRÈRE DE p */
+        div#mon_id,    /* BALISES_CIBLES p AYANT L'ATTRIBUT HTML "id"  */
+        div.ma_class,  /* BALISES_CIBLES p AYANT L'ATTRIBUT HTML "class" */
+
+        /* CI-DESSOUS
+        LES BALISES_CIBLES dont un attribut correspond à un fait (existe, commence par, ...) */
+        p[siAttributExiste],        
+        p[siAttributExiste = "et est égale à un valeur précise ?"],
+        p[siAttributExiste *= "('contient') et correspond à une expression régulière ?"],
+        p[siAttributExiste ^= "('commence par') et correspond à une expression régulière ?"],
+        p[siAttributExiste $= "('fini par') et correspond à une expression régulière ?"]
+        {   
+            property: value;
+            border:solid;
+        }
+        #mon_id{border-left: 10px solid pink;}
+        #ma_class{text-decoration:underline;font-weight:bolder;}
+        #mon_id>#___mon_id.ma_class{background: brown;color:green;}
+        p[data-qlqchose]{background: green;}
+        p[data-qlqchose = "oui__||__non"]{border-top:1em solid gold}
+        p[data-qlqchose *= "||"]{border-right:1em solid purple}
+        p[data-qlqchose ^= "oui"]{border-bottom:1em solid gray}
+        p[data-qlqchose $= "non"]{border-left:1em solid black}
+        /* 
+        LIEN VERS L'ENSEMBLE DES "SELECTEURS CSS" 
+        https://www.w3.org/Style/css3-selectors-updates/WD-css3-selectors-20010126.fr.html#selectors
+        */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+        /* 
+        B°)                             [ STYLISER ] 
+                                        À L'AIDE DES PROPRIÉTÉ   
+        */
+        p{
+            background: red;
+            z-index:100;
+            border-width:100px;
+            color: #ff324e; color: #f4e; 
+            border: 1px solid red; box-shadow: 0 0 10px 1px black inset;
+            font-family: "Arial qlqchose"
+        }
+        /*
+        LIEN VERS L'ENSEMBLE DES PROPIÉTÉS CSS 
+        https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608902-memento-des-proprietes-css
+        */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+</style>
+
     <body>
+        <div id="#mon_id">
+            Je suis une balise universelle, <span class="ma_class">ET MOI AUSSI</span> !!!   <br>
+            <div id="___mon_id" class="maclass">
+                JE N'AI PAS DROIT D'UTILISER PLUSIEURS FOIS LE MÊME NOM D'ID DANS UN MÊME DOCUMENT <br>
+                MAIS POUR LES NOMS DE CLASS PAS DE SOUCIS !!!
+            </div>
+            <p data-qlqchose="oui__||__non"><b><u>PS:</u></b>
+                <u>AVERTISSEMENT</u> 
+                Certaines balises (comme p) n'acceptent que des balises de type inline(ou inline-block) en leur sein , et refusent celles de type block (en les éjectant de leur intérieur à l'affichage de la page.
+                <u>PETIT CONSEIL:</u> 
+                <ul>
+                    <li>Utiliser la console du navigateur pour observer le code HTML, ainsi que le comportement du code CSS sur le HTML</li>
+                    <li>Et le utiliser VSCode pour observer le document HTML, et en avoir une meilleur compréhension</li> 
+                </ul>
+            </p>
+            <p data-qlqchose="ui__|__no"><b><u>PS:</u></b>
+                À PART LE BACKGROUND VERT, <br>
+                MOI JE N'AURAIS AUCUN STYLES<br/>
+                CAR MON ATTRIBUT "data-qlqchose" NE CORRESPOND JAMAIS AUX RÈGLES CSS DÉFINIT
+            </p>
+        </div>
+        <hr>
 
-        <!-- header>(figure>(h1>img[src="assets/images/zozor_logo.png"]+span{Zozor})+h2{Carnets de voyage})+menu>(li>a)*3 -->
-        <header>
-            <figure>
-                <h1>
-                    <img src="assets/images/zozor_logo.png" alt="">
-                    <span>Zozor</span>
-                </h1>
-                <h2>Carnets de voyage</h2>
-            </figure>
-            <menu>
-                <li class="active"><a href="#">ACCUEIL</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">CV</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </menu>
-        </header>
-        <!-- nav.banner>p+button -->
-        <nav class="banner">
-            <p>Retour sur mes vacances au États-Unis....</p>
-            <button>Voir l'article ►</button>
-        </nav>
-        <!-- main>(article>(h2{JE SUIS UN GRANS VOYAGEUR}>img[src="assets/images/ico_epingle.png"]+span)+p{lorem*3}*3)+section>.arrow-left+h3{À PROPOS DE L'AUTEUR}+img[src="assets/images/zozor_classe.png"]+p{lorem*2}*2+.sns>(button>i.sns-$)*5 -->
-        <main>
-            <article>
-                <!-- <h2 class="affichier l'image de l'inpingle via CSS"><span></span></h2> -->
-                <h2><img src="assets/images/ico_epingle.png" alt="étiquette de titre principal"/><span>JE SUIS UN GRANS VOYAGEUR</span></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam laborum molestiae distinctio consequatur exercitationem mollitia suscipit. <span class="fontactive">Impedit</span> porro qui ex quidem, laudantium nemo soluta perspiciatis, temporibus odit quae, aspernatur officia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo autem ex, distinctio quidem possimus fugiat nemo magnam assumenda corrupti qui soluta obcaecati facilis rerum, nisi eos ullam inventore praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, corporis iure, rem illo, quo quisquam fugit accusantium delectus cum natus deserunt. Optio minima, praesentium aliquid ea atque dolorem dicta ad?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae officiis velit accusantium sapiente? In, reprehenderit delectus! Quasi explicabo voluptatum temporibus doloremque nobis provident corrupti libero, minus voluptates, enim eum nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus repellendus architecto, nemo corporis dolore delectus obcaecati cupiditate tempora nulla aliquid qui iure molestias, ducimus, sapiente corrupti voluptatum dolor eaque! Deserunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam necessitatibus obcaecati illum labore aperiam doloribus eaque assumenda, quod quisquam. Laborum accusantium ducimus nulla perspiciatis corrupti iusto fuga repellat nam possimus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nihil molestiae, ducimus rerum, laudantium excepturi deserunt fuga, harum aut magnam corrupti. Quas in quia blanditiis sunt incidunt sed deleniti amet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur harum porro, assumenda voluptas est quia, sapiente ad at pariatur minima praesentium! Libero in quia, ex repellat itaque similique id laudantium?</p>
-            </article>
-            <section>
-                <div class="arrow-left"></div>
-                <h3>À PROPOS DE L'AUTEUR</h3>
-                <img src="assets/images/zozor_classe.png" alt="photo auteur">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias veniam voluptates molestias repudiandae eveniet eum aliquid repellat architecto, minima fugit, soluta asperiores, praesentium sed.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus voluptate possimus saepe nostrum et. Laborum accusamus minus dolore, commodi facilis vero a, harum aliquid rerum cum alias, provident voluptatem!</p>
-                <div class="sns">
-                    <button><i class="fb"></i></button>
-                    <button><i class="tw"></i></button>
-                    <button><i class="vim"></i></button>
-                    <button><i class="fli"></i></button>
-                    <button><i class="rss"></i></button>
-                </div>
-            </section>
-        </main>
-        <!-- footer>.arrowup -->
-        <!-- 
-            section>h5{MON DERNIER TWEET}+p[lorem}*2
-            section>h5{MES PHOTOS}+ul>(li>img[src="assets/images/photo$.jpg"])*5
-            section>h5{MES AMIS}+ul>li{nom ami}*8
+
+
+        <!-- 3°) 
+        SOLUTION TRÈS COURT TERME:
+        Soit pour tester une idée de manière intéractive via la console du navigateur, ou de manière brute dans son code html
+        Soit pour rendre la style à appliquer prioritaire
+        
+
+        DANS LA BALISE OUVRANTE D'UNE BALISE HTML, ÉCRIRE L'ATTRIBUT "style=''" ET Y ÉCRIRE LES PROPRIÉTÉS DE STYLE DÉSIRÉS
         -->
-        <footer>
-            <div class="arrowup"></div>
-            <section>
-                <h5>MON DERNIER TWEET</h5>
-                <p>Hii haaaaaann !</p>
-                <p>Le 12 Mai à 23h12</p>
-            </section>
-
-            <section>
-                <h5>MES PHOTOS</h5>
-                <ul>
-                    <li><img src="assets/images/photo1.jpg" alt=""></li>
-                    <li><img src="assets/images/photo2.jpg" alt=""></li>
-                    <li><img src="assets/images/photo3.jpg" alt=""></li>
-                    <li><img src="assets/images/photo4.jpg" alt=""></li>
-                    <li><img src="assets/images/photo5.jpg" alt=""></li>
-                </ul>
-            </section>
+        <h1 style=" je_suis_une_propriété_css: 'et je suis sa valeur'; background:purple; color: white;font-weight: bolder;">2 TYPES DE CATÉGORIES DE BALISE HTML5 PRÉVALENT</h1>
+        <p id="#mon_id" class="ma_class">
+            LES BALISE DE TYPES:
+            <ol>
+                <li>INLINE</li>
+                <li>BLOCK</li>
+            </ol>
             
-            <section>
-                <h5>MES AMIS</h5>
-                <ul>
-                    <li>Pupi le lapin</li>
-                    <li>Mr Baobab</li>
-                    <li>Kaiwaii</li>
-                    <li>Perceval.eu</li>
-                    <li>Belette</li>
-                    <li>Le concombre masqué</li>
-                    <li>Ptit prince</li>
-                    <li>Mr Fan</li>
-                </ul>
-            </section>
-        </footer>
+        </p>
+        
 
-                
+
+
+
+
+        <h2>8 CATÉGORIE DE BALISES EXISTENT</h2>
+        <p>
+            DANS L'ORDRE, LES BALISES DE: 
+            <ol>
+                <li>premier niveau (html, head, body)</li>
+                <li>méta-données (meta, link, script, style, title)</li>
+                <li>baseline (h#, p)</li>
+                <li>mise en page inline (em/strong, u, b, i, ....</li>
+                <li>mise en page block (dl, ul, ol table, form, details, et leurs sous-éléments)</li>
+                <li>structurantes (header, nav, main, section, article, aside, footer</li>
+                <li>multimédia (iframe, a, img, figure, audio, video, object</li>
+                <li>universelles</li>
+            </ol>
+        </p>
     </body>
 </html>
+
