@@ -1,1 +1,73 @@
 body{background: wheat;}
+
+@font-face {
+    font-family: 'dayrom';
+    src: url('assets/polices/dayrom.woff2') format('woff2'),
+         url('assets/polices/dayrom.woff') format('woff');
+    font-weight: lighter;
+    font-style: lighter;
+
+
+}
+
+@font-face {
+    font-family: ballpark;
+    src: url('assets/polices/ballpark.woff2') format('woff2'),
+         url('assets/polices/ballpark.woff') format('woff');
+    font-weight:lighter;
+    font-style: lighter;
+
+}
+/* @font-face{
+    font-family: dayrom;
+    src: url(assets/polices/dayrom.woff);
+}
+@font-face{
+    font-family: ballpark;
+    src: url(assets/polices/ballpark.woff);
+} */
+h1{
+    font-family: ballpark;
+}
+h2{
+    font-family: dayrom;
+}
+
+.active>a, footer ul li, main a{
+    color:brown;
+}
+.btn, aside *{
+    color:white;
+}
+.aside{
+    background:#6e6962;
+}
+
+body{padding:1em 2em;
+background:url(assets/images/fond_jaune.png)}
+body>header{
+    border-image: url(assets/images/separateur.png);
+    border-bottom:solid;
+    /* border:solid; */
+    position: relative;
+}
+body>header>hgroup{width: 30%;}
+body>header>hgroup>img{float:left;}
+body>header>hgroup>h1{}
+body>header>hgroup>h2{clear: both;}
+body>header>menu{    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    bottom: 0;}
+body>header>menu>li{}
+body>header>menu>li.active>a{text-decoration: underline;}
+body>header>menu>li>a{text-decoration: none;
+    color: black;}
+body>nav{}
+body>main{}
+body>footer{}

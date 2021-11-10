@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP: son premier site web</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP: son premier site web</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
+        <!-- header>(hgroup>(img[src="assets/images/zozor_logo.png"]+h1{Zozor}+h2{Carnets de voyage}))+menu>(li>a{Accueil})*4 -->
+        <header>
+            <hgroup>
+                <img src="assets/images/zozor_logo.png" alt="">
+                <h1>Zozor</h1>
+                <h2>Carnets de voyage</h2>
+            </hgroup>
+            <menu>
+                <li class="active"><a href="">ACCUEIL</a></li>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">CV</a></li>
+                <li><a href="">CONTACT</a></li>
+            </menu>
+        </header>
+            <!-- hgroup>img[src="assets/zozor_logo.png"]+h1{Zozor}+h2{Carnets de voyage} -->
+            <!-- menu>(li>a{Accueil})*4 -->
 
-</body>
-</html>
+        <!-- nav>p{Retour sur mes vacances aux état-unis}+button{Voir l'article} -->
+        <nav>
+            <p>Retour sur mes vacances aux état-unis</p>
+            <button>Voir l'article</button>
+        </nav>
+    </body>
+</html> 
