@@ -1,10 +1,3 @@
-# Ceci est la branche "master"
+# Début du projet 2: booki, une agence de plannification de voyage
 
-Le fichier index.html est un exercice de base pour apprendre et comprendre HTML 
-Il consiste en à appliquer du style ) un document HTML tout en découvrant le ce qu'est:
-- un document HTML, 
-- le langage HTML,
-- une balise, et ses attributs
-
-Le tout est de vous rendre possible et facile la création d'une page web basique.
-
+- [ÉTAPE PAR ÉTAPE](https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/DW+P2+V2+Etapes+cles.pdf)
