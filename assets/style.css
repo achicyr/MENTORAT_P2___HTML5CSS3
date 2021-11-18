@@ -1,0 +1,24 @@
+@import url("assets/normalize.css");
+
+*{box-sizing:border-box;}
+
+:root{
+    --bleu1: #0065PC;
+    --bleu2: #DEEBFF;
+    --gris: #F2F2F2;
+    --breakpointDesktop: 992px;
+    --breakpointMobile: 768px;
+    font-family: Raleway;
+}
+
+main>section>nav{cursor:pointer;}
+
+@media screen and (min-width: var(--breakpointDesktop)) {
+    
+}
+@media screen and (max-width: var(--breakpointMobile) and (min-width: var(--breakpointDesktop))) {
+    
+}
+@media screen and (max-width: var(--breakpointMobile)) {
+    
+}
