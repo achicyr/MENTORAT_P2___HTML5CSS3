@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki: plannification de voyage</title>
+    <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/af00583391.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- header>img[src="assets/images/logo/Booki@3x.png"]+menu>(li>a{Hébergement})*2 -->
@@ -24,71 +25,73 @@
 
 
 
-    <!-- nav>h2{Trouvez votre hébergement pour des vacances de rêve}+h3{En plein centre ville ou en pleine nature}+(form>section>span.fab.map-marker-alt+input[placeholder="Marseille, France"]+button{Rechercher})+(section>em{Filtres}+(button{Économique}>i.fab.fa-money-bill-wave)*4)+div.indice{Plus de 500 logements disponibles dans cette ville} -->
+    <!-- nav>h1{Trouvez votre hébergement pour des vacances de rêve}+h2{En plein centre ville ou en pleine nature}+(form>span.fas.map-marker-alt+input[placeholder="Marseille, France"]+button{Rechercher})+(section>em{Filtres}+(button{Économique}>i.fab.fa-money-bill-wave)*4)+div.indice{Plus de 500 logements disponibles dans cette ville} -->
     <nav>
-        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-        <h3>En plein centre ville ou en pleine nature</h3>
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h2 class="text-shadow0">En plein centre ville ou en pleine nature</h2>
         <form action="">
-            <section>
-                <span class="fab map-marker-alt"></span>
-                <input type="text" placeholder="Marseille, France">
-                <button>Rechercher</button>
-            </section>
+            <span class="fas fa-map-marker-alt"></span>
+            <input type="text" placeholder="Marseille, France">
+            <button>Rechercher</button>
         </form>
         <section>
             <em>Filtres</em>
-            <button>Économique<i class="fab fa-money-bill-wave"></i></button>
-            <button>Économique<i class="fab fa-money-bill-wave"></i></button>
-            <button>Économique<i class="fab fa-money-bill-wave"></i></button>
-            <button>Économique<i class="fab fa-money-bill-wave"></i></button>
+            <button>Économique <i class="fas fa-money-bill-wave"></i></button>
+            <button>Économique <i class="fas fa-money-bill-wave"></i></button>
+            <button>Économique <i class="fas fa-money-bill-wave"></i></button>
+            <button>Économique <i class="fas fa-money-bill-wave"></i></button>
+            <button>Économique <i class="fas fa-money-bill-wave"></i></button>
         </section>
-        <div class="indice">Plus de 500 logements disponibles dans cette ville</div>
+        <div class="indice text-shadow0">
+            <i class="fas fa-info-circle"></i>
+            <!-- <i>ⓘ</i> -->
+            Plus de 500 logements disponibles dans cette ville
+        </div>
     </nav>
 
 
-
     <!-- main>
-        section.hebergements>h3{Hébergement à Marseille}+(nav>img+h4{Auberge La Cannibière}+p{Nuit à partir de &lt;span&gt;25€&lt;/span&gt;}+div.stars>i.fas.fa-star*4+i.far.fa-star)*6+a{Affichier plus}
-        +section.populaires>(h3{Les plus populaires}+i.fab.fa-chart-line)+(nav>img+h4{Auberge La Cannibière}+p{Nuit à partir de &lt;span&gt;25€&lt;/span&gt;}+div.stars>i.fas.fa-star*4+i.far.fa-star)*3
+        section.hebergements>h3{Hébergement à Marseille}+(nav>img+h4{Auberge La Cannibière}+p{Nuit à partir de <span&gt;25€</span&gt;}+div.stars>i.fas.fa-star*4+i.far.fa-star)*6+a{Affichier plus}
+        +section.populaires>(h3{Les plus populaires}+i.fab.fa-chart-line)+(nav>img+h4{Auberge La Cannibière}+p{Nuit à partir de <span&gt;25€</span&gt;}+div.stars>i.fas.fa-star*4+i.far.fa-star)*3
         section.activites>((nav.full>img+h4{Vieux Port})+(nav.mid>img+h4{Fort de Pomègues})*2)*2
     -->
         <main>
         <section class="hebergements">
             <h3>Hébergement à Marseille</h3>
             <nav>
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+            </nav>
+            <nav>
+                <a href="#"><img src="assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt=""></a>
+                <h4>Auberge La Cannibière</h4>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+            </nav>
+            <nav>
+                <a href="#"><img src="assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt=""></a>
+                <h4>Auberge La Cannibière</h4>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <nav>
                 <a href="#"><img src="" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <nav>
                 <a href="#"><img src="" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <nav>
                 <a href="#"><img src="" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-            </nav>
-            <nav>
-                <a href="#"><img src="" alt=""></a>
-                <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-            </nav>
-            <nav>
-                <a href="#"><img src="" alt=""></a>
-                <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0" >Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <a href="">Affichier plus</a>
@@ -97,52 +100,54 @@
 
 
         <section class="populaires">
-            <h3>Les plus populaires</h3>
-            <i class="fab fa-chart-line"></i>
+            <h3>Les plus populaires
+                <i class="fab fa-chart-line"></i>
+            </h3>
             <nav>
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0">Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <nav>
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0">Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
             <nav>
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt=""></a>
                 <h4>Auberge La Cannibière</h4>
-                <p>Nuit à partir de &lt;span&gt;25€&lt;/span&gt;</p>
+                <p class="text-shadow0">Nuit à partir de <span>25€</span></p>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </nav>
         </section>
 
 
         <section class="activites">
+            <h3>Activités à Marseille</h3>
             <nav class="full">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Vieux Port</h4>
             </nav>
             <nav class="mid">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Fort de Pomègues</h4>
             </nav>
             <nav class="mid">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Fort de Pomègues</h4>
             </nav>
             <nav class="full">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Vieux Port</h4>
             </nav>
             <nav class="mid">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Fort de Pomègues</h4>
             </nav>
             <nav class="mid">
-                <img src="" alt="">
+                <img src="assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                 <h4>Fort de Pomègues</h4>
             </nav>
         </section>
@@ -153,7 +158,7 @@
     <footer>
         <div>
             <h5>À propos</h5>
-            <ul>
+            <ul class="text-shadow0">
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
@@ -161,7 +166,7 @@
         </div>
         <div>
             <h5>À propos</h5>
-            <ul>
+            <ul class="text-shadow0">
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
@@ -169,7 +174,7 @@
         </div>
         <div>
             <h5>À propos</h5>
-            <ul>
+            <ul class="text-shadow0">
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
                 <li>Fonctionnement du site</li>
