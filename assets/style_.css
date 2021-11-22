@@ -1,0 +1,40 @@
+@import url("assets/normalize.css");
+
+*{box-sizing:border-box;}
+ul{padding:0;list-style:none;}
+a{text-decoration:none;color:black;}
+
+.clickable{cursor:pointer;}
+.text-shadow0{font-weight:1;text-shadow:0 0 1px black,0 0 1px var(--gris);}
+
+:root{
+    --bleu1: #0065FC;
+    --bleu2: #DEEBFF;
+    --gris: #F2F2F2;
+    --breakpointDesktop: 992px;
+    --breakpointMobile: 768px;
+    font-family: 'Raleway', sans-serif;
+}
+
+main>section>nav{cursor:pointer;}
+
+
+@media screen and (min-width: var(--breakpointDesktop)) {
+    
+}
+@media screen and (max-width: var(--breakpointMobile)) and (min-width: var(--breakpointDesktop)) {
+    
+}
+@media screen and (max-width: var(--breakpointMobile)) {
+    
+}
+
+
+
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+
+
+
+
