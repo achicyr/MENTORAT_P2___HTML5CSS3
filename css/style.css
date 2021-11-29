@@ -148,10 +148,10 @@ body>nav>form>i.fas.fa-map-marker-alt {
 
 body>nav>#filters {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 390px 19px 17px;
-  position: relative;
-  bottom: 22px;
+  /* justify-content: space-between; */
+  /* margin: 20px 390px 19px 17px; */
+  /* position: relative;
+  bottom: 22px; */
 }
 
 body>nav>#filters>p {
@@ -171,22 +171,35 @@ body>nav>#filters>ul {
 body>nav>#filters>ul>li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  border: 3px solid #F2F2F2;
+  margin-right: 25px;
+  /* height: 29px;
+  width: 122px; */
+  border-radius: 50px;
+  text-align: center;
+  /* padding-top: 5px; */
+  font-size: 10px;
+  font-weight: 900;
+  padding-right: 10px;
 }
 
 body>nav>#filters>ul>li>.fas {
-  border: 3px solid #F2F2F2;
-  width: 29px;
-  height: 29px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
   text-align: center;
-  padding-top: 4px;
+  /* padding-top: 4px; */
   background: #DEEBFF;
   color: #0065FC;
-  position: absolute;
+  /* position: absolute; */
 }
 
 body>nav>#filters>ul>li>span {
-  border: 3px solid #F2F2F2;
+  /* border: 3px solid #F2F2F2;
   margin-right: 25px;
   height: 29px;
   width: 122px;
@@ -195,7 +208,7 @@ body>nav>#filters>ul>li>span {
   padding-top: 5px;
   font-size: 10px;
   font-weight: 900;
-  padding-left: 23px;
+  */
 }
 
 body>nav>#filters>ul>li :hover{
@@ -206,8 +219,8 @@ color: white;
 body>nav>#housing {
   display: flex;
   margin-left: 17px;
-  position: relative;
-  bottom: 42px;
+  /* position: relative;
+  bottom: 42px; */
   }
 
   body>nav>#housing>i {
@@ -239,11 +252,13 @@ main>#hosting {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  width: 47%;
-  margin-left: 27px;
-  margin-top: -35px;
+  gap:10px;
+  padding:10px;
+  width: 60%;
+  /* margin-left: 27p x; */
+  /* margin-top: -35px; */
   background: blue;
-  height: 299px;
+  /* height: 299px; */
 } 
 
 main>#hosting>#hosting_link { 
@@ -253,22 +268,22 @@ main>#hosting>#hosting_link {
 }
 
 main>#hosting>a {
-  position: relative;
+  /* position: relative; */
   text-decoration: none;
-  width: 132px;
+  width: 30%;
   background: red;
-  height: 95px;
+  /* height: 95px; */
   font-size: 40%;
-  top: 11px;
+  /* top: 11px; */
 }
 
 main>#hosting>a>img {
-  height: calc(95% - 30px);
-  width: 128.8px;
+  height: 100px;
+  width: 100%;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
-  padding-top: 3px;
-  padding-left: 3px;
+  /* padding-top: 3px;
+  padding-left: 3px; */
 }
 main>#hosting>a>h4 {}
 
@@ -296,12 +311,7 @@ main>#hosting>a>p>span {
   position: relative;
 }
 
-    display: flex;
-    margin-left: 7px;
-    position: relative;
-    bottom: 21px;
-    font-size: 47%;
-}
+
 
 main>#hosting>a>div>i {}
 
